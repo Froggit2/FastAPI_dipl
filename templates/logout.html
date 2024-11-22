@@ -1,0 +1,21 @@
+{% extends "glavn.html" %}
+
+{% block content %}
+<h1>
+    Выход из аккаунта
+</h1>
+<form action="logout" method="post">
+    <p>
+        Логин:
+        <br>
+        <input type="text" name="login" placeholder="Введите свой логин" required>
+    </p>
+    <p>
+        Пароль:
+        <br>
+        <input type="password" name="password" placeholder="Введите свой пароль" required>
+    </p>
+    <button type="submit">Выйти</button>
+    {{ message }}
+</form>
+{% endblock %}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% block menu_1 %}
+    <h4>
+        <table>
+            <tr>
+                <td>
+                    <a href="http://127.0.0.1:8000">Главная</a>
+                </td>
+                <td>
+                    <a href="http://127.0.0.1:8000/login">Логин</a>
+                </td>
+                <td>
+                    <a href="http://127.0.0.1:8000/registr">Регистрация</a>
+                </td>
+                <td>
+                    <a href="http://127.0.0.1:8000/logout">Выход</a>
+                </td>
+                <td>
+                    <a href="#">Прочее</a>
+                </td>
+            </tr>
+        </table>
+    </h4>
+{% endblock %}
+
+{% block content %}
+    <h1>Главная страница</h1>
+    <br>
+    <a href="http://127.0.0.1:8000/registr">Впервые здесь?</a>
+{% endblock %}
+
+</body>
+</html>

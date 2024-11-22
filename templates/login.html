@@ -1,0 +1,23 @@
+{% extends "glavn.html" %}
+
+{% block content %}
+<h1>Введите логин и пароль</h1>
+    <form action="login" method="post">
+        <p>
+            Логин:
+            <br>
+            <input type="text" name="login" placeholder="Введите свой логин" required>
+        </p>
+        <p>
+            Пароль:
+            <br>
+            <input type="password" name="password" placeholder="Введите свой пароль" required>
+        </p>
+        <button type="submit">Войти</button>
+        {{ message }}
+        {{ error }}
+    </form>
+    <p>
+        <a href="http://127.0.0.1:8000/registr">Не помните пароль?</a>
+    </p>
+{% endblock %}
