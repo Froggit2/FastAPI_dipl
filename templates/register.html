@@ -2,8 +2,10 @@
 
 {% block content %}
 <h1>Регистрация</h1>
-    <form action="registr" method="post">
-        {{ error }}
+    <form action="/register" method="post">
+        {% if error %}
+            <p style="color: red">{{ error }}</p>
+        {% endif %}
         <p>
             Логин:
             <br>
@@ -16,12 +18,13 @@
             <input type="password" name="password_2" placeholder="Повторите пароль" required>
         </p>
         <p>
-            <button name="registr" type="submit">Зарегестрироваться</button>
+            <button type="submit">Зарегестрироваться</button>
         </p>
         <p>
             <a href="http://127.0.0.1:8000/login">Уже есть аккаунт?</a>
         </p>
-        {{ message }}
-        {{ error }}
+        {% if message %}
+            <p style="color: green">{{ message }}</p>
+        {% endif %}
     </form>
 {% endblock %}
