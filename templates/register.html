@@ -4,7 +4,7 @@
 <h1>Регистрация</h1>
     <form action="/register" method="post">
         {% if error %}
-            <p style="color: red">{{ error }}</p>
+            {{ error }}
         {% endif %}
         <p>
             Логин:
@@ -24,7 +24,7 @@
             <a href="http://127.0.0.1:8000/login">Уже есть аккаунт?</a>
         </p>
         {% if message %}
-            <p style="color: green">{{ message }}</p>
+            {{ message }}
         {% endif %}
     </form>
 {% endblock %}
