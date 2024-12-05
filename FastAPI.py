@@ -38,8 +38,10 @@ async def registration(request: Request):
 
 @app.get('/products')
 async def products_list(request: Request):
-    product = Products.query.all()
-    return templates.TemplateResponse('products.html', {'request': request, 'product': product})
+    session = Session
+    products = session.query(Products).all()
+    session.close()
+    return templates.TemplateResponse('products.html', {'request': request, 'product': products})
 
 @app.post('/products')
 async def products(request: Request):
