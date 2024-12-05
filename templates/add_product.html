@@ -1,0 +1,19 @@
+{% extends "glavn.html" %}
+
+{% block content %}
+<h1>Добавить продукт</h1>
+<form action="add_product">
+    <p>
+        Название:
+        <br>
+        <input type="text" name="name" placeholder="Введите название продукта" required>
+    </p>
+    <p>
+        Цена:
+        <br>
+        <input type="text" name="price" placeholder="Введите цену продукта" required>
+    </p>
+    <button type="submit">Добавить</button>
+    {{ message }}
+</form>
+{% endblock %}
